@@ -1,5 +1,5 @@
 <Project>
-  <Import Project="./Directory.Packages.Props" />
+ <!-- <Import Project="./Directory.Packages.Props" />-->
 
 	<PropertyGroup>
 		<SharedDir>$(MSBuildThisFileDirectory)/Shared/</SharedDir>
