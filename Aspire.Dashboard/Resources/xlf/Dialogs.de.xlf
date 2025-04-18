@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="de" original="../Dialogs.resx">
+    <body>
+      <trans-unit id="DialogCloseButtonText">
+        <source>Close</source>
+        <target state="translated">Schließen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogDetailsColumnHeader">
+        <source>Details</source>
+        <target state="translated">Details</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogTimestampColumnHeader">
+        <source>Timestamp</source>
+        <target state="translated">Zeitstempel</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogTitle">
+        <source>Exemplars</source>
+        <target state="translated">Exemplare</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogTrace">
+        <source>Trace</source>
+        <target state="translated">Ablaufverfolgung</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogTraceColumnHeader">
+        <source>Trace</source>
+        <target state="translated">Ablaufverfolgung</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ExemplarsDialogValueColumnHeader">
+        <source>Value</source>
+        <target state="translated">Wert</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FieldRequired">
+        <source>A value is required.</source>
+        <target state="translated">Ein Wert ist erforderlich.</target>
+        <note>{0} is the literal, untranslated field name which we do not want to show, so it is missing.</note>
+      </trans-unit>
+      <trans-unit id="FieldTooLong">
+        <source>A maximum length of {1} characters is allowed.</source>
+        <target state="translated">Eine maximale Länge von {1} Zeichen ist zulässig.</target>
+        <note>{0} is the field name, whereas {1} is the length. We don't want to show the field name, so it is missing.</note>
+      </trans-unit>
+      <trans-unit id="FilterDialogApplyFilterButtonText">
+        <source>Apply filter</source>
+        <target state="translated">Filter anwenden</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogCancelButtonText">
+        <source>Cancel</source>
+        <target state="translated">Abbrechen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogConditionInputLabel">
+        <source>Condition</source>
+        <target state="translated">Bedingung</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogFieldPlaceholder">
+        <source>Field</source>
+        <target state="translated">Feld</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogParameterInputLabel">
+        <source>Parameter</source>
+        <target state="translated">Parameter</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogRemoveFilterButtonText">
+        <source>Remove filter</source>
+        <target state="translated">Filter entfernen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="FilterDialogTextValuePlaceholder">
+        <source>Value</source>
+        <target state="translated">Wert</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogCategoryNavigation">
+        <source>Site-wide navigation</source>
+        <target state="translated">Websiteweite Navigation</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogCategoryPageNavigation">
+        <source>Page navigation</source>
+        <target state="translated">Seitennavigation</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogCategoryPanels">
+        <source>Panels</source>
+        <target state="translated">Bereiche</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogDecreasePanelSize">
+        <source>Decrease panel size</source>
+        <target state="translated">Bereichsgröße verringern</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGetHelpLinkText">
+        <source>Go to Microsoft Learn documentation</source>
+        <target state="translated">Zur Microsoft Learn-Dokumentation wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToConsoleLogs">
+        <source>Go to Console Logs</source>
+        <target state="translated">Zu Konsolenprotokollen wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToHelp">
+        <source>Go to Help</source>
+        <target state="translated">Zur Hilfe wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToMetrics">
+        <source>Go to Metrics</source>
+        <target state="translated">Zu Metriken wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToResources">
+        <source>Go to Resources</source>
+        <target state="translated">Zu Ressourcen wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToSettings">
+        <source>Go to Settings</source>
+        <target state="translated">Zu Einstellungen wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToStructuredLogs">
+        <source>Go to Structured Logs</source>
+        <target state="translated">Zu strukturierten Protokollen wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogGoToTraces">
+        <source>Go to Traces</source>
+        <target state="translated">Zu Ablaufverfolgungen wechseln</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogIncreasePanelSize">
+        <source>Increase panel size</source>
+        <target state="translated">Bereichsgröße erhöhen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogKeyboardShortcutsTitle">
+        <source>Keyboard Shortcuts</source>
+        <target state="translated">Tastenkombinationen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogResetPanelSize">
+        <source>Reset panel sizes</source>
+        <target state="translated">Bereichsgrößen zurücksetzen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogTogglePanelOpen">
+        <source>Close panel</source>
+        <target state="translated">Bereich schließen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="HelpDialogTogglePanelOrientation">
+        <source>Toggle panel orientation</source>
+        <target state="translated">Bereichsausrichtung umschalten</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="OpenInTextVisualizer">
+        <source>Open in text visualizer</source>
+        <target state="translated">In Textschnellansicht öffnen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="OpenTraceDialogCancelButtonText">
+        <source>Cancel</source>
+        <target state="translated">Abbrechen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="OpenTraceDialogMessage">
+        <source>Waiting for trace {0} to load...</source>
+        <target state="translated">Es wird auf das Laden der Ablaufverfolgung {0} gewartet...</target>
+        <note>{0} is a trace ID</note>
+      </trans-unit>
+      <trans-unit id="SettingsDialogDarkTheme">
+        <source>Dark</source>
+        <target state="translated">Dunkel</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogDashboardLogsAndTelemetry">
+        <source>Dashboard logs and telemetry</source>
+        <target state="translated">Dashboardprotokolle und -telemetrie</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogLanguage">
+        <source>Language</source>
+        <target state="translated">Sprache</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogLanguagePageReloads">
+        <source>The page will reload on language change.</source>
+        <target state="translated">Die Seite wird bei einer Sprachänderung neu geladen.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogLightTheme">
+        <source>Light</source>
+        <target state="translated">Hell</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogSystemTheme">
+        <source>System</source>
+        <target state="translated">System</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogTheme">
+        <source>Theme</source>
+        <target state="translated">Design</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SettingsDialogVersion">
+        <source>Version: {0}</source>
+        <target state="translated">Version: {0}</target>
+        <note>{0} is the dashboard version string</note>
+      </trans-unit>
+      <trans-unit id="SettingsRemoveAllButtonText">
+        <source>Remove all</source>
+        <target state="translated">Alle entfernen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="TextVisualizerDialogJsonFormat">
+        <source>Format JSON</source>
+        <target state="translated">JSON formatieren</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="TextVisualizerDialogPlaintextFormat">
+        <source>Unformatted</source>
+        <target state="translated">Unformatiert</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="TextVisualizerDialogXmlFormat">
+        <source>Format XML</source>
+        <target state="translated">XML formatieren</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="TextVisualizerSelectFormatType">
+        <source>Select format</source>
+        <target state="translated">Format auswählen</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

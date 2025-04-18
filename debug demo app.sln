@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35805.281 main
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Dashboard", "Aspire.Dashboard\Aspire.Dashboard.csproj", "{609068D7-471E-B809-4E02-336D32D4168C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelemetryGenerator", "TelemetryGenerator\TelemetryGenerator.csproj", "{0CDF8DFC-6D98-4307-B8A5-6C29B8743466}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{609068D7-471E-B809-4E02-336D32D4168C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609068D7-471E-B809-4E02-336D32D4168C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609068D7-471E-B809-4E02-336D32D4168C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609068D7-471E-B809-4E02-336D32D4168C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CDF8DFC-6D98-4307-B8A5-6C29B8743466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDF8DFC-6D98-4307-B8A5-6C29B8743466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDF8DFC-6D98-4307-B8A5-6C29B8743466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDF8DFC-6D98-4307-B8A5-6C29B8743466}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B404C88-CF22-45E1-ABD7-F2B461F6EDA9}
+	EndGlobalSection
+EndGlobal

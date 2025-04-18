@@ -1,0 +1,32 @@
+::deep.span-details-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "toolbar"
+        "main";
+    overflow: auto;
+    gap: calc(var(--design-unit) * 1px);
+}
+
+::deep.span-details-layout > fluent-toolbar {
+    grid-area: toolbar;
+}
+
+::deep .property-grid-container h4 {
+    padding: calc(var(--design-unit) * 3px);
+    margin-top: calc(var(--design-unit) * 1px);
+    margin-bottom: 0;
+}
+
+::deep .spanlink-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: calc((6 + (var(--design-unit) * var(--density))) * 1px);
+    align-items: center;
+}
+
+::deep .spanlink-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

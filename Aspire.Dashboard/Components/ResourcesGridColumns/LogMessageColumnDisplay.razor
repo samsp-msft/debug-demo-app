@@ -1,0 +1,25 @@
+﻿@namespace Aspire.Dashboard.Components
+
+@using Aspire.Dashboard.Extensions
+@using Aspire.Dashboard.Otlp.Model
+@using Aspire.Dashboard.Resources
+
+@inject IStringLocalizer<StructuredLogs> Loc
+
+<GridValue Value="@LogEntry.Message"
+           ValueDescription="@Loc[nameof(StructuredLogs.StructuredLogsMessageColumnHeader)]"
+           EnableHighlighting="true"
+           HighlightText="@FilterText"
+           StopClickPropagation="true">
+    <ContentInButtonArea>
+        <ExceptionDetails ExceptionText="@_exceptionText" />
+    </ContentInButtonArea>
+</GridValue>
+
+@code {
+    [Parameter, EditorRequired]
+    public required OtlpLogEntry LogEntry { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string FilterText { get; set; }
+}

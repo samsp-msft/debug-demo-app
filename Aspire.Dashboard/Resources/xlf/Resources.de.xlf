@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="de" original="../Resources.resx">
+    <body>
+      <trans-unit id="ResourceActionConsoleLogsText">
+        <source>Console logs</source>
+        <target state="translated">Konsolenprotokolle</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionMetricsText">
+        <source>Metrics</source>
+        <target state="translated">Metriken</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionStructuredLogsText">
+        <source>Structured logs</source>
+        <target state="translated">Strukturierte Protokolle</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionTelemetryTooltip">
+        <source>No telemetry found for this resource.</source>
+        <target state="translated">Für diese Ressource wurden keine Telemetriedaten gefunden.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionTracesText">
+        <source>Traces</source>
+        <target state="translated">Überwachungen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceCollapseAllChildren">
+        <source>Collapse child resources</source>
+        <target state="translated">Untergeordnete Ressourcen reduzieren</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceCommandFailed">
+        <source>{0} "{1}" failed</source>
+        <target state="translated">{0} "{1}" fehlgeschlagen</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandStarting">
+        <source>{0} "{1}" starting</source>
+        <target state="translated">{0} "{1}" wird gestartet</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandSuccess">
+        <source>{0} "{1}" succeeded</source>
+        <target state="translated">{0} "{1}" erfolgreich</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandToastViewLogs">
+        <source>View console logs</source>
+        <target state="translated">Konsolenprotokolle anzeigen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsEndpointUrl">
+        <source>Endpoint URL</source>
+        <target state="translated">Endpunkt-URL</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsProxyUrl">
+        <source>Proxy URL</source>
+        <target state="translated">Proxy-URL</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsViewConsoleLogs">
+        <source>View console logs</source>
+        <target state="translated">Konsolenprotokolle anzeigen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceExpandAllChildren">
+        <source>Expand child resources</source>
+        <target state="translated">Untergeordnete Ressourcen erweitern</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceFilterOptionEmpty">
+        <source>(Unset)</source>
+        <target state="translated">(Nicht festgelegt)</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesActionsColumnHeader">
+        <source>Actions</source>
+        <target state="translated">Aktionen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesChangeViewOptions">
+        <source>View options</source>
+        <target state="translated">Optionen anzeigen</target>
+        <note>An icon allowing the user to expand or collapse all child resources.</note>
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerArgumentsProperty">
+        <source>Container arguments</source>
+        <target state="translated">Containerargumente</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerCommandProperty">
+        <source>Container command</source>
+        <target state="translated">Containerbefehl</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerIdProperty">
+        <source>Container ID</source>
+        <target state="translated">Container-ID</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerImageProperty">
+        <source>Container image</source>
+        <target state="translated">Containerimage</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerLifetimeProperty">
+        <source>Container lifetime</source>
+        <target state="translated">Containerlebensdauer</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerPortsProperty">
+        <source>Container ports</source>
+        <target state="translated">Containerports</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsDisplayNameProperty">
+        <source>Display name</source>
+        <target state="translated">Anzeigename</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableArgumentsProperty">
+        <source>Executable arguments</source>
+        <target state="translated">Ausführbare Argumente</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutablePathProperty">
+        <source>Executable path</source>
+        <target state="translated">Pfad der ausführbaren Datei</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableProcessIdProperty">
+        <source>Process ID</source>
+        <target state="translated">Prozess-ID</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableWorkingDirectoryProperty">
+        <source>Working directory</source>
+        <target state="translated">Arbeitsverzeichnis</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExitCodeProperty">
+        <source>Exit code</source>
+        <target state="translated">Exitcode</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsHealthStateProperty">
+        <source>Health state</source>
+        <target state="translated">Integritätsstatus</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsProjectPathProperty">
+        <source>Project path</source>
+        <target state="translated">Projektpfad</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStartTimeProperty">
+        <source>Start time</source>
+        <target state="translated">Startzeit</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStateProperty">
+        <source>State</source>
+        <target state="translated">Status</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStopTimeProperty">
+        <source>Stop time</source>
+        <target state="translated">Beendigungszeit</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEndpointsColumnHeader">
+        <source>Endpoints</source>
+        <target state="translated">Endpunkte</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEnvironmentColumnHeader">
+        <source>Environment</source>
+        <target state="translated">Umgebung</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesFiltered">
+        <source>Has filters</source>
+        <target state="translated">Hat Filter</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNotFiltered">
+        <source>No filters</source>
+        <target state="translated">Keine Filter</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesResourceStatesHeader">
+        <source>State</source>
+        <target state="translated">Zustand</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesSourceColumnHeader">
+        <source>Source</source>
+        <target state="translated">Quelle</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesStartTimeColumnHeader">
+        <source>Start time</source>
+        <target state="translated">Startzeit</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesStateColumnHeader">
+        <source>State</source>
+        <target state="translated">Status</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEnvironmentVariablesHeader">
+        <source>Environment variables for {0}</source>
+        <target state="translated">Umgebungsvariablen für {0}</target>
+        <note>{0} is a resource</note>
+      </trans-unit>
+      <trans-unit id="ResourcesHeader">
+        <source>Resources</source>
+        <target state="translated">Ressourcen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNoEnvironmentVariables">
+        <source>No environment variables</source>
+        <target state="translated">Keine Umgebungsvariablen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNoResources">
+        <source>No resources found</source>
+        <target state="translated">Keine Ressourcen gefunden</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesPageTitle">
+        <source>{0} resources</source>
+        <target state="translated">{0} Ressourcen</target>
+        <note>{0} is an application name</note>
+      </trans-unit>
+      <trans-unit id="ResourcesResourceTypesHeader">
+        <source>Resource types</source>
+        <target state="translated">Ressourcentypen</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesTypeColumnHeader">
+        <source>Type</source>
+        <target state="translated">Typ</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="WaitingForHealthDataMessage">
+        <source>Waiting for health data...</source>
+        <target state="translated">Auf Integritätsdaten wird gewartet...</target>
+        <note>A message shown in the UI as a placeholder to indicate that a health check is expected to produce health report data soon. Once it arrives, this message will be hidden and the data shown in its place.</note>
+      </trans-unit>
+      <trans-unit id="WaitingHealthDataStatusMessage">
+        <source>Waiting...</source>
+        <target state="translated">Warten ...</target>
+        <note>A message shown in the UI as a placeholder to indicate that a health check is expected to produce health report data soon. Once it arrives, this message will be hidden and the data shown in its place.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

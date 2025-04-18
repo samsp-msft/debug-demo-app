@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="ja" original="../ConsoleLogs.resx">
+    <body>
+      <trans-unit id="ConsoleLogsFailedToInitialize">
+        <source>Failed to initialize</source>
+        <target state="translated">初期化できませんでした</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsFinishedWatchingLogs">
+        <source>Finished watching logs</source>
+        <target state="translated">ログの監視が完了しました</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsHeader">
+        <source>Console logs</source>
+        <target state="translated">コンソール ログ</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsInitializingLogViewer">
+        <source>Initializing log viewer...</source>
+        <target state="translated">ログ ビューアーを初期化しています...</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsLoadingResources">
+        <source>Loading resources ...</source>
+        <target state="translated">リソースを読み込んでいます ...</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsLogsNotYetAvailable">
+        <source>Logs not yet available</source>
+        <target state="translated">ログはまだ使用できません</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsNoResourceSelected">
+        <source>No resource selected</source>
+        <target state="translated">リソースが選択されていません</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsPageTitle">
+        <source>{0} console logs</source>
+        <target state="translated">{0} のコンソール ログ</target>
+        <note>{0} is an application name</note>
+      </trans-unit>
+      <trans-unit id="ConsoleLogsResourceCommands">
+        <source>Resource commands</source>
+        <target state="translated">リソース コマンド</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsSelectResourceToolbar">
+        <source>Select resource</source>
+        <target state="translated">リソースの選択</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsSettings">
+        <source>Console logs settings</source>
+        <target state="translated">コンソール ログの設定</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsTimestampHide">
+        <source>Hide timestamps</source>
+        <target state="translated">タイムスタンプを非表示</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsTimestampShow">
+        <source>Show timestamps</source>
+        <target state="new">Show timestamps</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsTimestampShowUtc">
+        <source>UTC timestamps</source>
+        <target state="new">UTC timestamps</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsUnknownState">
+        <source>Unknown state</source>
+        <target state="translated">不明な状態</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ConsoleLogsWatchingLogs">
+        <source>Watching logs...</source>
+        <target state="translated">ログを監視しています...</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="DownloadLogs">
+        <source>Download logs</source>
+        <target state="translated">ログのダウンロード</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="LogStatusLabel">
+        <source>Service log status</source>
+        <target state="translated">サービス ログの状態</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

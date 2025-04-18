@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Aspire.Dashboard.MCP_gRPC";
+
+service DashboardMcp {
+  rpc GetTraces(GetTracesServiceRequest) returns (GetTracesServiceResponse) {}
+  rpc GetTraceDetails(GetTraceDetailsServiceRequest) returns (GetTraceDetailsServiceResponse) {}
+  rpc GetStructuredLogs(GetStructuredLogsServiceRequest) returns (GetStructuredLogsServiceResponse) {}
+  rpc GetConsoleLogs(GetConsoleLogsServiceRequest) returns (GetConsoleLogsServiceResponse) {}
+  rpc GetTraceStructuredLogs(GetTraceStructuredLogsServiceRequest) returns (GetTraceStructuredLogsServiceResponse) {}
+  rpc GetResourceGraph(GetResourceGraphServiceRequest) returns (GetResourceGraphServiceResponse) {}
+}
+
+message GetTracesServiceRequest {
+  string resourceName = 1;   
+}
+
+message GetTracesServiceResponse {
+  string traces = 1;
+}
+
+message GetTraceDetailsServiceRequest {
+  string traceId = 1;
+}
+
+message GetTraceDetailsServiceResponse {
+  string traceDetails = 1;
+}
+
+message GetStructuredLogsServiceRequest {
+  string resourceName = 1;
+}
+
+message GetStructuredLogsServiceResponse {
+  string logResults = 1;
+}
+
+message GetConsoleLogsServiceRequest {
+  string resourceName = 1;
+}
+
+message GetConsoleLogsServiceResponse {
+  string logResults = 1;
+}
+
+message GetTraceStructuredLogsServiceRequest {
+  string traceId = 1;
+}
+
+message GetTraceStructuredLogsServiceResponse {
+  string logResults = 1;
+}
+
+message GetResourceGraphServiceRequest {
+  //intentionally empty
+}
+
+message GetResourceGraphServiceResponse {
+  string resourceGraph = 1;
+}
+

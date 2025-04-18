@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="zh-Hant" original="../Resources.resx">
+    <body>
+      <trans-unit id="ResourceActionConsoleLogsText">
+        <source>Console logs</source>
+        <target state="translated">主控台記錄</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionMetricsText">
+        <source>Metrics</source>
+        <target state="translated">計量</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionStructuredLogsText">
+        <source>Structured logs</source>
+        <target state="translated">結構化記錄</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionTelemetryTooltip">
+        <source>No telemetry found for this resource.</source>
+        <target state="translated">找不到此資源的遙測。</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceActionTracesText">
+        <source>Traces</source>
+        <target state="translated">追蹤</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceCollapseAllChildren">
+        <source>Collapse child resources</source>
+        <target state="translated">折疊子資源</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceCommandFailed">
+        <source>{0} "{1}" failed</source>
+        <target state="translated">{0}「{1}」失敗</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandStarting">
+        <source>{0} "{1}" starting</source>
+        <target state="translated">{0}「{1}」正在啟動</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandSuccess">
+        <source>{0} "{1}" succeeded</source>
+        <target state="translated">{0}「{1}」成功</target>
+        <note>{0} is the resource. {1} is the display name of the command.</note>
+      </trans-unit>
+      <trans-unit id="ResourceCommandToastViewLogs">
+        <source>View console logs</source>
+        <target state="translated">檢視主控台記錄</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsEndpointUrl">
+        <source>Endpoint URL</source>
+        <target state="translated">端點 URL</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsProxyUrl">
+        <source>Proxy URL</source>
+        <target state="translated">Proxy URL</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceDetailsViewConsoleLogs">
+        <source>View console logs</source>
+        <target state="translated">檢視主機記錄</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceExpandAllChildren">
+        <source>Expand child resources</source>
+        <target state="translated">展開子資源</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourceFilterOptionEmpty">
+        <source>(Unset)</source>
+        <target state="translated">(取消設定)</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesActionsColumnHeader">
+        <source>Actions</source>
+        <target state="translated">動作</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesChangeViewOptions">
+        <source>View options</source>
+        <target state="translated">檢視選項</target>
+        <note>An icon allowing the user to expand or collapse all child resources.</note>
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerArgumentsProperty">
+        <source>Container arguments</source>
+        <target state="translated">容器引數</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerCommandProperty">
+        <source>Container command</source>
+        <target state="translated">容器命令</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerIdProperty">
+        <source>Container ID</source>
+        <target state="translated">容器識別碼</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerImageProperty">
+        <source>Container image</source>
+        <target state="translated">容器映像</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerLifetimeProperty">
+        <source>Container lifetime</source>
+        <target state="translated">容器存留期</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsContainerPortsProperty">
+        <source>Container ports</source>
+        <target state="translated">容器連接埠</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsDisplayNameProperty">
+        <source>Display name</source>
+        <target state="translated">顯示名稱</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableArgumentsProperty">
+        <source>Executable arguments</source>
+        <target state="translated">可執行檔變數</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutablePathProperty">
+        <source>Executable path</source>
+        <target state="translated">可執行檔路徑</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableProcessIdProperty">
+        <source>Process ID</source>
+        <target state="translated">處理序識別碼</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExecutableWorkingDirectoryProperty">
+        <source>Working directory</source>
+        <target state="translated">工作目錄</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsExitCodeProperty">
+        <source>Exit code</source>
+        <target state="translated">結束代碼</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsHealthStateProperty">
+        <source>Health state</source>
+        <target state="translated">健全狀態</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsProjectPathProperty">
+        <source>Project path</source>
+        <target state="translated">專案路徑</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStartTimeProperty">
+        <source>Start time</source>
+        <target state="translated">開始時間</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStateProperty">
+        <source>State</source>
+        <target state="translated">狀態</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesDetailsStopTimeProperty">
+        <source>Stop time</source>
+        <target state="translated">停止時間</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEndpointsColumnHeader">
+        <source>Endpoints</source>
+        <target state="translated">端點</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEnvironmentColumnHeader">
+        <source>Environment</source>
+        <target state="translated">環境</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesFiltered">
+        <source>Has filters</source>
+        <target state="translated">有篩選</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNotFiltered">
+        <source>No filters</source>
+        <target state="translated">沒有篩選</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesResourceStatesHeader">
+        <source>State</source>
+        <target state="translated">狀態</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesSourceColumnHeader">
+        <source>Source</source>
+        <target state="translated">來源</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesStartTimeColumnHeader">
+        <source>Start time</source>
+        <target state="translated">開始時間</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesStateColumnHeader">
+        <source>State</source>
+        <target state="translated">狀態</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesEnvironmentVariablesHeader">
+        <source>Environment variables for {0}</source>
+        <target state="translated">{0} 的環境變數</target>
+        <note>{0} is a resource</note>
+      </trans-unit>
+      <trans-unit id="ResourcesHeader">
+        <source>Resources</source>
+        <target state="translated">資源</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNoEnvironmentVariables">
+        <source>No environment variables</source>
+        <target state="translated">沒有任何環境變數</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesNoResources">
+        <source>No resources found</source>
+        <target state="translated">找不到任何資源</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesPageTitle">
+        <source>{0} resources</source>
+        <target state="translated">{0} 資源</target>
+        <note>{0} is an application name</note>
+      </trans-unit>
+      <trans-unit id="ResourcesResourceTypesHeader">
+        <source>Resource types</source>
+        <target state="translated">資源類型</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ResourcesTypeColumnHeader">
+        <source>Type</source>
+        <target state="translated">類型</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="WaitingForHealthDataMessage">
+        <source>Waiting for health data...</source>
+        <target state="translated">正在等待健康情況資料...</target>
+        <note>A message shown in the UI as a placeholder to indicate that a health check is expected to produce health report data soon. Once it arrives, this message will be hidden and the data shown in its place.</note>
+      </trans-unit>
+      <trans-unit id="WaitingHealthDataStatusMessage">
+        <source>Waiting...</source>
+        <target state="translated">正在等候...</target>
+        <note>A message shown in the UI as a placeholder to indicate that a health check is expected to produce health report data soon. Once it arrives, this message will be hidden and the data shown in its place.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,12 @@
+<Project>
+  <Import Project="./Directory.Packages.Props" />
+
+	<PropertyGroup>
+		<SharedDir>$(MSBuildThisFileDirectory)/Shared/</SharedDir>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+
+</Project>
+

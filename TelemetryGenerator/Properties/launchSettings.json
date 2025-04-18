@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TelemetryGenerator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:15877"
+      }
+    }
+  }
+}

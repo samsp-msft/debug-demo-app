@@ -1,0 +1,49 @@
+﻿@using Aspire.Dashboard.Model
+@using Aspire.Dashboard.Resources
+@using Aspire.Dashboard.Utils
+
+@inject IStringLocalizer<Columns> Loc
+@inject IStringLocalizer<Resources> ResourcesLoc
+
+<GridValue Value="@Value"
+           ValueToVisualize="@ValueToVisualize"
+           ValueDescription="@ResourcesLoc[nameof(Resources.ResourcesSourceColumnHeader)]"
+           EnableHighlighting="true"
+           HighlightText="@FilterText"
+           PreCopyToolTip="@Loc[nameof(Columns.SourceColumnDisplayCopyCommandToClipboard)]"
+           ToolTip="@Tooltip"
+           StopClickPropagation="true">
+    <ContentAfterValue>
+        @if (ContentAfterValue is not null)
+        {
+            foreach (var launchArgument in ContentAfterValue)
+            {
+                if (launchArgument.IsShown)
+                {
+                    <span class="subtext">&nbsp;@launchArgument.Value</span>
+                }
+                else
+                {
+                    <span class="subtext">&nbsp;@DashboardUIHelpers.GetMaskingText(length: 6).MarkupString</span>
+                }
+            }
+        }
+    </ContentAfterValue>
+</GridValue>
+
+@code {
+    [Parameter, EditorRequired]
+    public required string FilterText { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string Value { get; set; }
+
+    [Parameter]
+    public required List<LaunchArgument>? ContentAfterValue { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string ValueToVisualize { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string Tooltip { get; set; }
+}
