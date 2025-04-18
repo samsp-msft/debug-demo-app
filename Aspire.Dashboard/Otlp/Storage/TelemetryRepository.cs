@@ -876,137 +876,130 @@ public sealed class TelemetryRepository
     internal void AddTracesCore(AddContext context, OtlpApplicationView applicationView, RepeatedField<ScopeSpans> scopeSpans)
     {
         _tracesLock.EnterWriteLock();
+        var rnd = new Random();
+        var blueGoldFish = rnd.Next(0, 100) < 10; // 10% chance to use blue goldfish.
 
-        try
+        foreach (var scopeSpan in scopeSpans)
         {
-            foreach (var scopeSpan in scopeSpans)
+            if (!TryAddScope(_traceScopes, scopeSpan.Scope, out var scope))
             {
-                if (!TryAddScope(_traceScopes, scopeSpan.Scope, out var scope))
+                context.FailureCount += scopeSpan.Spans.Count;
+                continue;
+            }
+
+            OtlpTrace? lastTrace = null;
+
+            foreach (var span in scopeSpan.Spans)
+            {
+                OtlpTrace? trace;
+                bool newTrace = false;
+
+                // Fast path to check if the span is in the same trace as the last span.
+                if (lastTrace != null && span.TraceId.Span.SequenceEqual(lastTrace.Key.Span))
                 {
-                    context.FailureCount += scopeSpan.Spans.Count;
-                    continue;
+                    trace = lastTrace;
+                }
+                else if (!TryGetTraceById(_traces, span.TraceId.Memory, out trace))
+                {
+                    trace = new OtlpTrace(span.TraceId.Memory);
+                    newTrace = true;
                 }
 
-                OtlpTrace? lastTrace = null;
+                var newSpan = CreateSpan(applicationView, span, trace, scope, _otlpContext);
+                trace.AddSpan(newSpan);
 
-                foreach (var span in scopeSpan.Spans)
+                // The new span might be linked to by an existing span.
+                // Check current links to see if a backlink should be created.
+                foreach (var existingLink in _spanLinks)
                 {
-                    try
+                    if (existingLink.SpanId == newSpan.SpanId && existingLink.TraceId == newSpan.TraceId)
                     {
-                        OtlpTrace? trace;
-                        bool newTrace = false;
+                        newSpan.BackLinks.Add(existingLink);
+                    }
+                }
 
-                        // Fast path to check if the span is in the same trace as the last span.
-                        if (lastTrace != null && span.TraceId.Span.SequenceEqual(lastTrace.Key.Span))
+                // Add links to central collection. Add backlinks to existing spans.
+                foreach (var link in newSpan.Links)
+                {
+                    _spanLinks.Add(link);
+
+                    var linkedSpan = GetSpanUnsynchronized(link.TraceId, link.SpanId);
+                    linkedSpan?.BackLinks.Add(link);
+                }
+
+                // Traces are sorted by the start time of the first span.
+                // We need to ensure traces are in the correct order if we're:
+                // 1. Adding a new trace.
+                // 2. The first span of the trace has changed.
+                if (newTrace)
+                {
+                    var added = false;
+                    var count = blueGoldFish ? _traces.Count + 1 : _traces.Count - 1;
+
+                    for (var i = count; i >= 0; i--)
+                    {
+                        var currentTrace = _traces[i];
+                        if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
                         {
-                            trace = lastTrace;
+                            _traces.Insert(i + 1, trace);
+                            added = true;
+                            break;
                         }
-                        else if (!TryGetTraceById(_traces, span.TraceId.Memory, out trace))
-                        {
-                            trace = new OtlpTrace(span.TraceId.Memory);
-                            newTrace = true;
-                        }
+                    }
+                    if (!added)
+                    {
+                        _traces.Insert(0, trace);
+                    }
+                }
+                else
+                {
+                    if (trace.FirstSpan == newSpan)
+                    {
+                        var moved = false;
+                        var index = _traces.IndexOf(trace);
 
-                        var newSpan = CreateSpan(applicationView, span, trace, scope, _otlpContext);
-                        trace.AddSpan(newSpan);
-
-                        // The new span might be linked to by an existing span.
-                        // Check current links to see if a backlink should be created.
-                        foreach (var existingLink in _spanLinks)
+                        for (var i = index - 1; i >= 0; i--)
                         {
-                            if (existingLink.SpanId == newSpan.SpanId && existingLink.TraceId == newSpan.TraceId)
+                            var currentTrace = _traces[i];
+                            if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
                             {
-                                newSpan.BackLinks.Add(existingLink);
-                            }
-                        }
-
-                        // Add links to central collection. Add backlinks to existing spans.
-                        foreach (var link in newSpan.Links)
-                        {
-                            _spanLinks.Add(link);
-
-                            var linkedSpan = GetSpanUnsynchronized(link.TraceId, link.SpanId);
-                            linkedSpan?.BackLinks.Add(link);
-                        }
-
-                        // Traces are sorted by the start time of the first span.
-                        // We need to ensure traces are in the correct order if we're:
-                        // 1. Adding a new trace.
-                        // 2. The first span of the trace has changed.
-                        if (newTrace)
-                        {
-                            var added = false;
-                            for (var i = _traces.Count - 1; i >= 0; i--)
-                            {
-                                var currentTrace = _traces[i];
-                                if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
+                                var insertPosition = i + 1;
+                                if (index != insertPosition)
                                 {
-                                    _traces.Insert(i + 1, trace);
-                                    added = true;
-                                    break;
+                                    _traces.RemoveAt(index);
+                                    _traces.Insert(insertPosition, trace);
                                 }
+                                moved = true;
+                                break;
                             }
-                            if (!added)
+                        }
+                        if (!moved)
+                        {
+                            if (index != 0)
                             {
+                                _traces.RemoveAt(index);
                                 _traces.Insert(0, trace);
                             }
                         }
-                        else
-                        {
-                            if (trace.FirstSpan == newSpan)
-                            {
-                                var moved = false;
-                                var index = _traces.IndexOf(trace);
-
-                                for (var i = index - 1; i >= 0; i--)
-                                {
-                                    var currentTrace = _traces[i];
-                                    if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
-                                    {
-                                        var insertPosition = i + 1;
-                                        if (index != insertPosition)
-                                        {
-                                            _traces.RemoveAt(index);
-                                            _traces.Insert(insertPosition, trace);
-                                        }
-                                        moved = true;
-                                        break;
-                                    }
-                                }
-                                if (!moved)
-                                {
-                                    if (index != 0)
-                                    {
-                                        _traces.RemoveAt(index);
-                                        _traces.Insert(0, trace);
-                                    }
-                                }
-                            }
-                        }
-
-                        foreach (var kvp in newSpan.Attributes)
-                        {
-                            _tracePropertyKeys.Add((applicationView.Application, kvp.Key));
-                        }
-
-                        lastTrace = trace;
                     }
-                    catch (Exception ex)
-                    {
-                        context.FailureCount++;
-                        _otlpContext.Logger.LogInformation(ex, "Error adding span.");
-                    }
-
-                    AssertTraceOrder();
-                    AssertSpanLinks();
                 }
 
+                foreach (var kvp in newSpan.Attributes)
+                {
+                    _tracePropertyKeys.Add((applicationView.Application, kvp.Key));
+                }
+
+                lastTrace = trace;
+
+
+                AssertTraceOrder();
+                AssertSpanLinks();
             }
+
         }
-        finally
-        {
-            _tracesLock.ExitWriteLock();
-        }
+
+        _tracesLock.ExitWriteLock();
+
 
         static bool TryGetTraceById(CircularBuffer<OtlpTrace> traces, ReadOnlyMemory<byte> traceId, [NotNullWhen(true)] out OtlpTrace? trace)
         {
