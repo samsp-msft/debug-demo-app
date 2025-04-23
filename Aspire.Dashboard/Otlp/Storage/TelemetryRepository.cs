@@ -876,9 +876,6 @@ public sealed class TelemetryRepository
     internal void AddTracesCore(AddContext context, OtlpApplicationView applicationView, RepeatedField<ScopeSpans> scopeSpans)
     {
         _tracesLock.EnterWriteLock();
-        var rnd = new Random();
-        var blueGoldFish = rnd.Next(0, 100) < 10; // 10% chance to use blue goldfish.
-
         foreach (var scopeSpan in scopeSpans)
         {
             if (!TryAddScope(_traceScopes, scopeSpan.Scope, out var scope))
@@ -934,9 +931,10 @@ public sealed class TelemetryRepository
                 if (newTrace)
                 {
                     var added = false;
-                    var count = blueGoldFish ? _traces.Count + 1 : _traces.Count - 1;
-
-                    for (var i = count; i >= 0; i--)
+                   // Insert the new trace in chronological order based on its first span's start time.
+                   // We iterate from newest to oldest trace to find the correct insertion point,
+                   // maintaining the traces in ascending chronological order (oldest first).
+                    for (var i = _traces.Count - 1; i >= 0; i--)
                     {
                         var currentTrace = _traces[i];
                         if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
