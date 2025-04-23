@@ -259,6 +259,14 @@ internal sealed class CircularBuffer<T> : IList<T>, ICollection<T>, IEnumerable<
 
     private int InternalIndex(int index)
     {
+        if (_buffer.Count == 0)
+        {
+            throw new InvalidOperationException("Cannot access index in an empty buffer.");
+        }
+        if (index < 0 || index >= _buffer.Count)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), $"Index {index} is outside the valid range [0,{_buffer.Count - 1}].");
+        }
         return (_start + index) % _buffer.Count;
     }
 

@@ -876,8 +876,6 @@ public sealed class TelemetryRepository
     internal void AddTracesCore(AddContext context, OtlpApplicationView applicationView, RepeatedField<ScopeSpans> scopeSpans)
     {
         _tracesLock.EnterWriteLock();
-        var rnd = new Random();
-        var blueGoldFish = rnd.Next(0, 100) < 10; // 10% chance to use blue goldfish.
 
         foreach (var scopeSpan in scopeSpans)
         {
@@ -933,22 +931,27 @@ public sealed class TelemetryRepository
                 // 2. The first span of the trace has changed.
                 if (newTrace)
                 {
-                    var added = false;
-                    var count = blueGoldFish ? _traces.Count + 1 : _traces.Count - 1;
-
-                    for (var i = count; i >= 0; i--)
+                    if (_traces.Count == 0)
                     {
-                        var currentTrace = _traces[i];
-                        if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
-                        {
-                            _traces.Insert(i + 1, trace);
-                            added = true;
-                            break;
-                        }
+                        _traces.Add(trace);
                     }
-                    if (!added)
+                    else
                     {
-                        _traces.Insert(0, trace);
+                        var added = false;
+                        for (var i = _traces.Count - 1; i >= 0; i--)
+                        {
+                            var currentTrace = _traces[i];
+                            if (trace.FirstSpan.StartTime > currentTrace.FirstSpan.StartTime)
+                            {
+                                _traces.Insert(i + 1, trace);
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            _traces.Insert(0, trace);
+                        }
                     }
                 }
                 else
